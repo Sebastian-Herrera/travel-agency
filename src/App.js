@@ -1,7 +1,12 @@
+import Home from './views/Home/Home.jsx';
 import './scss/app.scss';
 
 function App() {
-  return <div className='App'></div>;
+  return (
+    <main>
+      <Home />
+    </main>
+  );
 }
 
 export default App;
