@@ -1,10 +1,10 @@
-import Home from './views/Home/Home.jsx';
 import './scss/app.scss';
+import HomePage from './views/Home/Home';
 
 function App() {
   return (
     <main>
-      <Home />
+      <HomePage />
     </main>
   );
 }

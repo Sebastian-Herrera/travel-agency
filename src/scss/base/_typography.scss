@@ -1,0 +1,38 @@
+// @use '../utilities/mixins' as *;
+
+// $font-scale--desktop: 0.95;
+// $font-scale--tablet: 0.9;
+
+$font-sizing-map: (
+  'h1'      : 3em,
+  'h2'      : 2.4em,
+  'h3'      : 1.8em,
+  'h4'      : 1.4em,
+  'p'       : 1.2em,
+  '.text-sm': 1em,
+  '.text-xs': 0.8em,
+);
+
+// @include responsive(phones-portrait) {
+@each $font-type, $font-size in $font-sizing-map {
+  #{$font-type} {
+    font-size: $font-size;
+  }
+}
+// }
+
+// @include responsive(desktops) {
+//   @each $font-type, $font-size in $font-sizing-map {
+//     #{$font-type} {
+//       font-size: $font-size * $font-scale--desktop;
+//     }
+//   }
+// }
+
+// @include responsive(tablets) {
+//   @each $font-type, $font-size in $font-sizing-map {
+//     #{$font-type} {
+//       font-size: $font-size * $font-scale--tablet;
+//     }
+//   }
+// }
