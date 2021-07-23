@@ -1,9 +1,11 @@
 import HomeOption from '../HomeOption/HomeOption';
 
 const HomeForm = () => {
+  const data = ['cop', 'usd'];
+
   return (
     <form>
-      <HomeOption title='from' />
+      <HomeOption title='from' data={data} />
       <HomeOption title='to' />
       <HomeOption title='departure' />
       <HomeOption title='return' />
