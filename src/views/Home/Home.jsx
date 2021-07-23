@@ -1,9 +1,17 @@
 import HomeForm from './HomeForm/HomeForm';
+import { useState } from 'react';
 
 const HomePage = () => {
+  const [datosApi, setDatosApi] = useState({});
+
+  const getDatosApi = (api) => {
+    setDatosApi({ api });
+    console.log(api);
+  };
+
   return (
     <section>
-      <HomeForm />
+      <HomeForm getDatosApi={getDatosApi} />
       {/* <h1>lorem</h1>
       <h2>lorem</h2>
       <h3>lorem</h3>
