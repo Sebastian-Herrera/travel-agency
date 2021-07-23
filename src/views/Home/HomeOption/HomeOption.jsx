@@ -1,4 +1,4 @@
-const HomeOption = ({title}) => {
+const HomeOption = ({ title }) => {
   return (
     <div>
       <label>{title}</label>

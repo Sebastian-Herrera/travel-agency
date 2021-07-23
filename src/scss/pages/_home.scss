@@ -1,0 +1,13 @@
+@use '../utilities/variables' as *;
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $medium $small;
+
+  div {
+    flex: 40%;
+    padding: $medium;
+    border: solid rgba($color: white, $alpha: 0.3) 1px;
+  }
+}
