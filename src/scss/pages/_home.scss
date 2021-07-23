@@ -11,5 +11,9 @@ form {
     flex-direction: column;
     padding: $medium;
     border: solid rgba($color: white, $alpha: 0.3) 1px;
+
+    option {
+      color: black;
+    }
   }
 }
