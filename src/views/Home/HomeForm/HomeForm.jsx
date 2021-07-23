@@ -6,11 +6,11 @@ const HomeForm = () => {
   return (
     <form>
       <HomeOption title='from' data={data} />
-      <HomeOption title='to' />
-      <HomeOption title='departure' />
-      <HomeOption title='return' />
-      <HomeOption title='cabin' />
-      <HomeOption title='passengers' />
+      <HomeOption title='to' data={data} />
+      <HomeOption title='departure' data={data} />
+      <HomeOption title='return' data={data} />
+      <HomeOption title='cabin' data={data} />
+      <HomeOption title='passengers' data={data} />
     </form>
   );
 };
