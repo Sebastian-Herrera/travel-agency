@@ -1,7 +1,7 @@
-const HomeOption = (props) => {
+const HomeOption = ({title}) => {
   return (
     <div>
-      <label>{props.title}</label>
+      <label>{title}</label>
     </div>
   );
 };
