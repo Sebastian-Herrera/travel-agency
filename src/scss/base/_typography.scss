@@ -1,38 +1,62 @@
-// @use '../utilities/mixins' as *;
+@use '../utilities/mixins' as *;
 
-// $font-scale--desktop: 0.95;
-// $font-scale--tablet: 0.9;
+$font-scale--desktop: 0.95;
+$font-scale--tablet: 0.9;
 
-$font-sizing-map: (
-  'h1'      : 3em,
-  'h2'      : 2.4em,
-  'h3'      : 1.8em,
-  'h4'      : 1.4em,
-  'p'       : 1.2em,
-  '.text-sm': 1em,
-  '.text-xs': 0.8em,
+$font-map: (
+  h1: (
+    font-size: 3em,
+    color: red,
+  ),
+  h2: (
+    font-size: 2.4em,
+    color: blue,
+  ),
+  h3: (
+    font-size: 1.8em,
+    color: white,
+  ),
+  h4: (
+    font-size: 1.4em,
+    color: green,
+  ),
+  p: (
+    font-size: 1.2em,
+    color: purple,
+  ),
+  '.text-sm': (
+    font-size: 1em,
+    color: yellow,
+  ),
+  '.text-xs': (
+    font-size: 0.8em,
+    color: pink,
+  ),
 );
 
 // @include responsive(phones-portrait) {
-@each $font-type, $font-size in $font-sizing-map {
+@each $font-type, $value in $font-map {
   #{$font-type} {
-    font-size: $font-size;
+    color: map-get($value, color);
+    font-size: map-get($value, font-size);
   }
 }
 // }
 
-// @include responsive(desktops) {
-//   @each $font-type, $font-size in $font-sizing-map {
-//     #{$font-type} {
-//       font-size: $font-size * $font-scale--desktop;
-//     }
-//   }
-// }
+@include responsive(desktops) {
+  @each $font-type, $value in $font-map {
+    #{$font-type} {
+      color: map-get($value, color);
+      font-size: map-get($value, font-size) * $font-scale--desktop;
+    }
+  }
+}
 
-// @include responsive(tablets) {
-//   @each $font-type, $font-size in $font-sizing-map {
-//     #{$font-type} {
-//       font-size: $font-size * $font-scale--tablet;
-//     }
-//   }
-// }
+@include responsive(tablets) {
+  @each $font-type, $value in $font-map {
+    #{$font-type} {
+      color: map-get($value, color);
+      font-size: map-get($value, font-size) * $font-scale--tablet;
+    }
+  }
+}
